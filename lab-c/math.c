@@ -3,7 +3,7 @@
 
 int main()
 {
-   // ===== Inteiros =====
+   // ----------- Inteiros -----------
    int a = 10, b = 3;
 
    // Operações aritméticas básicas
@@ -19,7 +19,7 @@ int main()
    a++;    // a = 16
    b--;    // b = 5
 
-   // ===== Ponto flutuante =====
+   // ----------- Ponto flutuante -----------
    float f = 3.14f;
    double d = 2.718281828;
 
@@ -33,13 +33,13 @@ int main()
    double arred_up = ceil(2.3);    // arredonda para cima
    double arred_down = floor(2.8); // arredonda para baixo
 
-   // ===== Saída =====
-   printf("=== Inteiros ===\n");
+   // ----------- Saída -----------
+   printf("Inteiros: \n");
    printf("Soma: %d, Subtracao: %d, Multiplicacao: %d\n", soma, sub, mult);
    printf("Divisao: %d, Resto: %d\n", divi, resto);
    printf("a = %d, b = %d\n", a, b);
 
-   printf("\n=== Ponto Flutuante ===\n");
+   printf("\nPonto Flutuante: \n");
    printf("Float: %.2f, Double: %.8f\n", f, d);
    printf("Raiz de d: %.4f, f^2: %.2f\n", raiz, pot);
    printf("Seno: %.2f, Cosseno: %.2f, Tangente: %.2f\n", sen, cosi, tanx);

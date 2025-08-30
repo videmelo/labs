@@ -3,12 +3,12 @@
 
 int main()
 {
-   // ===== Char simples =====
+   // ------------------- Char simples ------------------- 
    char letra = 'A';
    char numero = '7';
    printf("Char letra: %c, Char numero: %c\n", letra, numero);
 
-   // ===== Strings =====
+   // -------------------  Strings ------------------- 
    char nome[50] = "Joao";
    char sobrenome[50] = "Silva";
    char nome_completo[100];
