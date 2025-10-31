@@ -4,26 +4,34 @@
 int play(char player, char board[3][3])
 {
    int line, column;
-   printf("Linha: ");
-   if (scanf("%d", &line) != 1)
+   int valid = 0;
+   do
    {
-      printf("Entrada invalida!\n");
-      fflush(stdin); 
-      return 0;
-   }
-   printf("Coluna: ");
-   if (scanf("%d", &column) != 1)
-   {
-      printf("Entrada invalida!\n");
-      fflush(stdin); 
-      return 0;
-   }
-   fflush(stdin);
-   if (line <= 0 || line > 3 || column <= 0 || column > 3)
-   {
-      printf("Posicao invalida!\n\n");
-      return 0;
-   }
+      printf("Linha: ");
+      if (scanf("%d", &line) != 1)
+      {
+         printf("Entrada invalida!\n");
+         fflush(stdin);
+         return 0;
+      }
+      printf("Coluna: ");
+      if (scanf("%d", &column) != 1)
+      {
+         printf("Entrada invalida!\n");
+         fflush(stdin);
+         return 0;
+      }
+      fflush(stdin);
+      if (line <= 0 || line > 3 || column <= 0 || column > 3)
+      {
+         printf("Posicao invalida!\n\n");
+         valid = 0;
+      }
+      else
+      {
+         valid = 1;
+      }
+   } while (!valid);
    if (board[line - 1][column - 1] == ' ')
    {
       system("cls");
@@ -71,7 +79,8 @@ void render(char board[3][3], char player)
 int main()
 {
    int playing = 1;
-   while (playing)
+   int option = 0;
+   do
    {
       char board[3][3] = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
       char player = 'O';
@@ -98,18 +107,16 @@ int main()
             player = (player == 'O') ? 'X' : 'O';
          }
       }
-      int option = 0;
       printf("\n[1] Jogar novamente\n[2] Sair\nEscolha uma opcao: ");
       if (scanf("%d", &option) != 1)
       {
          option = 2;
       }
-      fflush(stdin); 
+      fflush(stdin);
       if (option != 1)
       {
-         playing = 0;
          printf("Saindo...\n");
       }
-   }
+   } while (option == 1);
    return 0;
 }
