@@ -2,7 +2,6 @@
 #include <windows.h>
 #include <stdlib.h>
 
-// Função que realiza a jogada do jogador
 int play(char p, char table[3][3])
 {
    int l, c;
