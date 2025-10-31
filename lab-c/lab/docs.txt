@@ -1,0 +1,31 @@
+Este documento explica cada parte do código do arquivo game.c, que implementa um jogo da velha jogável no terminal.
+
+1. Objetivo
+-----------
+Criar um jogo da velha onde dois jogadores possam se enfrentar.
+
+2. Bibliotecas Utilizadas
+-------------------------
+- stdio.h: Funções de entrada e saída.
+- stdlib.h: Funções utilitárias (ex: system).
+
+3. Funções do Código
+--------------------
+
+- play(char p, char table[3][3])
+  Realiza a jogada do jogador, solicitando linha e coluna e validando a entrada.
+
+- wins(char table[3][3])
+  Verifica se há um vencedor no tabuleiro (linhas, colunas ou diagonais).
+
+- render(char table[3][3], char player)
+  Exibe o tabuleiro na tela e mostra de quem é a vez.
+
+- main()
+  Função principal. Controla o fluxo das jogadas, verifica vitória ou empate e alterna o jogador.
+
+4. Fluxo do Programa
+--------------------
+- O tabuleiro é exibido e o jogador da vez faz sua jogada.
+- Após cada jogada, verifica-se se houve vitória ou empate.
+- O jogo termina quando há um vencedor ou todas as casas são preenchidas.
