@@ -4,34 +4,26 @@
 int play(char player, char board[3][3])
 {
    int line, column;
-   int valid_input = 0;
-   do
+   printf("Linha: ");
+   if (scanf("%d", &line) != 1)
    {
-      printf("Linha: ");
-      if (scanf("%d", &line) != 1)
-      {
-         printf("Entrada invalida!\n");
-         fflush(stdin);
-         return 0;
-      }
-      printf("Coluna: ");
-      if (scanf("%d", &column) != 1)
-      {
-         printf("Entrada invalida!\n");
-         fflush(stdin);
-         return 0;
-      }
+      printf("Entrada invalida!\n");
       fflush(stdin);
-      if (line <= 0 || line > 3 || column <= 0 || column > 3)
-      {
-         printf("Posicao invalida!\n\n");
-         valid_input = 0;
-      }
-      else
-      {
-         valid_input = 1;
-      }
-   } while (!valid_input);
+      return 0;
+   }
+   printf("Coluna: ");
+   if (scanf("%d", &column) != 1)
+   {
+      printf("Entrada invalida!\n");
+      fflush(stdin);
+      return 0;
+   }
+   fflush(stdin);
+   if (line <= 0 || line > 3 || column <= 0 || column > 3)
+   {
+      printf("Posicao invalida!\n\n");
+      return 0;
+   }
    if (board[line - 1][column - 1] == ' ')
    {
       system("cls");
