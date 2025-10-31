@@ -4,7 +4,7 @@
 int play(char player, char board[3][3])
 {
    int line, column;
-   int valid = 0;
+   int valid_input = 0;
    do
    {
       printf("Linha: ");
@@ -25,13 +25,13 @@ int play(char player, char board[3][3])
       if (line <= 0 || line > 3 || column <= 0 || column > 3)
       {
          printf("Posicao invalida!\n\n");
-         valid = 0;
+         valid_input = 0;
       }
       else
       {
-         valid = 1;
+         valid_input = 1;
       }
-   } while (!valid);
+   } while (!valid_input);
    if (board[line - 1][column - 1] == ' ')
    {
       system("cls");
@@ -78,15 +78,15 @@ void render(char board[3][3], char player)
 
 int main()
 {
-   int playing = 1;
    int option = 0;
    do
    {
       char board[3][3] = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
       char player = 'O';
       int movs = 0;
+      int playing = 1;
       system("cls");
-      while (1)
+      while (playing)
       {
          render(board, player);
          if (play(player, board))
@@ -95,14 +95,14 @@ int main()
             {
                render(board, player);
                printf("Vitoria do jogador: %c\n", player);
-               break;
+               playing = 0;
             }
             movs++;
             if (movs == 9)
             {
                render(board, player);
                printf("Deu velha!\n");
-               break;
+               playing = 0;
             }
             player = (player == 'O') ? 'X' : 'O';
          }
