@@ -1,5 +1,19 @@
+Documentação do Jogo da Velha (game.c)
 
-Este documento explica cada parte do código do arquivo game.c, que implementa um jogo da velha jogável no terminal.
+Descrição do Aplicativo:
+O arquivo game.c implementa um jogo da velha para dois jogadores, jogado no terminal. Os jogadores alternam entre os símbolos 'O' e 'X', realizando jogadas até que um vença ou ocorra empate.
+
+Instruções de Uso:
+1. Compile o arquivo com um compilador C (exemplo: gcc game.c -o game).
+2. Execute o programa no terminal (./game ou game.exe no Windows).
+3. Siga as instruções na tela:
+   - Informe o número da linha (1 a 3) e da coluna (1 a 3) para realizar sua jogada.
+   - O programa alterna automaticamente entre os jogadores.
+   - Após cada jogada, o tabuleiro é atualizado e exibido.
+   - O jogo termina quando um jogador vence ou ocorre empate.
+   - Ao final, escolha se deseja jogar novamente ou sair.
+
+--------------------------------------------------
 
 1. Objetivo
 -----------
