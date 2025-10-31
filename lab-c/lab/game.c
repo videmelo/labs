@@ -1,6 +1,3 @@
-// Jogo da Velha (Tic-Tac-Toe) - Versão usando apenas scanf
-// Dois jogadores se alternam para jogar no mesmo computador
-
 #include <stdio.h>
 #include <windows.h>
 #include <stdlib.h>
